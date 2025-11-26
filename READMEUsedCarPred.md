@@ -38,11 +38,12 @@ After data cleaning, imputation of missing values, removal of outliers and other
 
 The optimal complexity was determined using PolynomialFeatures to be degree 3. Three models were built using Linear Regression, Ridge and Lasso for comparison of accuracy. The respective optimal Ridge and Lasso alpha values were obtained.
 
-EVALUATION   
+EVALUATION     
 Among the three models, the Linear Regression Model provided the lowest mean squared error both on the train and test sets. The coefficients of this model were extracted and a full model equation was built using these coefficients.
 
 DEPLOYMENT
 The full model equation would be placed inside a production application like, for example, a web app, API (Application Programming Interface), mobile app and Excel. 
 
 The model was trained on a log transformed 'price', therefore, a transformation would be required to get predictions back on the original scale.
-<img width="468" height="645" alt="image" src="https://github.com/user-attachments/assets/88102c3e-d10e-4738-9fd0-15af5882a955" />
+The model was also tested by comparing predictions with actual prices of several models.
+
