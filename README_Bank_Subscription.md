@@ -48,7 +48,9 @@ Evaluation
 
 Based on the comparison using the metrics of accuracy, precision, recall, F2 score, AUC and Profit/Loss, the Support Vector Classifier (SVC) is the clear winner being ahead in almost all of the metrics especially on AUC. Decision Tree is ahead in recall (99%) but SVC is right behind it (98%). Otherwise, SVC is ahead in all the other metrics.
 With regard to feature importance, the four models generally are in agreement that macroeconomics (e.g., euribor rate, consumer confidence index, consumer price index, timing of campaign) rather than demographics (e.g., age, marital status, job, education) influence subscription the most.
+
 Deployment
+
 Samples were taken from the test data to demonstrate how to use the different classifiers in predicting subscription of clients.
 Next steps and recommendations:
 	continue model development to include identification of clients who are likely to subscribe to a term deposit
