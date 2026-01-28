@@ -2,14 +2,18 @@ Read Me File
 Bank_Subscription_Prediction.ipynb
 
 Business Understanding
+
 The exercise is to compare the performance of the classifiers, namely KNearest Neighbor, Logistic Regression, Decision Tree Classifier, and Support Vector Classifier (SVC). A dataset related to marketing bank products over the telephone is utilized.
 The classification goal is to predict if a client will subscribe to a bank term deposit and determine the machine learning model that will best achieve this goal.     
 The predictions will help the marketing team to formulate a business strategy and a marketing campaign to increase bank clients subscription to term deposits.
 
 Data Understanding
+
 The dataset comes from the UCI Machine Learning repository. The data is from a Portugese banking institution and is a collection of the results of multiple marketing campaigns. Seventeen (17) marketing campaigns represent the data.
 The larger dataset has 41,188 rows while the smaller dataset has 4,119 rows. SVC uses the smaller dataset (a representative subset of the larger dataset) in order to conserve computational resources.
+
 Data Preparation
+
 The target variable 'y' is transformed to a numeric type "0" and "1". 
 There are no missing values. 
 The column 'duration' is dropped because the data do not help in the prediction.
@@ -21,6 +25,7 @@ The columns ‘euribor3m’ and ‘nr.employed’ are strongly correlated with �
 Categorical features are encoded.    
 
 Modeling
+
 Before building the models, a baseline performance is established.  A baseline model is built to benchmark the predictive ability of the four classifier models that are built. It is determined that the baseline Receiver Operating Curve AUC is 0.50.
 AUC (Area Under Curve) is the ability to distinguish between the positive (subscription) and negative (no subscription) classes across the model thresholds. AUC = 0.5 is random guessing while AUC = 1.0 is perfect separation of the classes. This means that the closer the model is to 1.0 the better it is in identifying the positive class.
 In order to address the imbalanced data, the class_weight parameter and SMOTE are used. 
@@ -39,6 +44,7 @@ It is a common metric used to find the best balance between catching as many pos
 F2 score is where β=2 and it is considered that Recall is twice as important as Precision.
 
 Evaluation
+
 Based on the comparison using the metrics of accuracy, precision, recall, F2 score, AUC and Profit/Loss, the Support Vector Classifier (SVC) is the clear winner being ahead in almost all of the metrics especially on AUC. Decision Tree is ahead in recall (99%) but SVC is right behind it (98%). Otherwise, SVC is ahead in all the other metrics.
 With regard to feature importance, the four models generally are in agreement that macroeconomics (e.g., euribor rate, consumer confidence index, consumer price index, timing of campaign) rather than demographics (e.g., age, marital status, job, education) influence subscription the most.
 Deployment
